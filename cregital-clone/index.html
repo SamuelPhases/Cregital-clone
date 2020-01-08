@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Cregital - Brand Identity, User Experience Design & Web ...</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <a href="" class="logo">CREGITAL</a>
+        <nav>
+            <ul>
+                <li><a href="">Work</a></li>
+                <li><a href="">Us</a></li>
+                <li><a href="">Stories</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="fwidth">
+            <h2 class="txt-type" data-wait="3000" data-words='["Design x Technology","Creative x Digital","We are Cregital"]'></h2>
+            <div class="text-block">
+                <h4>Digital Design & Development Agency</h4>
+                <p>Cregital is a digital product agency dedicated to building cutting-edge website experiences
+                 and brand identities for forward-thinking companies.
+                 We’re creatives driven by the synergy of design and technology. <a href="">View Selected Projects</a></p>    
+            </div>
+        </div>
+        
+
+        <!-- CLIENT -->
+        <div class="client">
+            <div class="left">
+                <div class="img1">
+                    <a href=""><img src="img/Capture.PNG" alt=""></a>
+                </div>
+                <div class="img1">
+                    <a href=""><img src="img/Capture.PNG" alt=""></a>
+                </div>
+                <div class="img2">
+                    <a href=""><img src="img/Capture.PNG" alt=""></a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="img1">
+                    <a href=""><img src="img/Capture.PNG" alt=""></a>
+                </div>
+                <div class="img1">
+                    <a href=""><img src="img/Capture.PNG" alt=""></a>
+                </div>
+                <div class="img2">
+                    <a href=""><img src="img/Capture.PNG" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SERVICES -->
+        <div class="services">
+            <h3>What we offer</h3>
+            <p>We believe in the beauty of simplicity and the value thoughtful design adds to any brand.
+                 With meticulous detail, dedication, creative collaboration, and craftsmanship,
+                 we bring our client’s ideas to life.
+            </p>
+
+            <div class="boxes">
+                <div class="box1">
+                    <a href=""><img src="img/Branding-1.png" alt=""></a>
+                    <h4>Branding</h4>
+                    <ul>
+                        <li>Visual Identity</li>
+                        <li>Brand Assets</li>
+                        <li>Brand Guidelines</li>
+                    </ul>
+                </div>
+
+                <div class="box2">
+                    <a href=""><img src="img/UX-Design-1.png" alt=""></a>
+                    <h4>UI/UX Design</h4>
+                    <ul>
+                        <li>Prototyping</li>
+                        <li>Content Strategy</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+
+                <div class="box3">
+                    <a href=""><img src="img/Web-Development-1.png" alt=""></a>
+                    <h4>Web Development</h4>
+                    <ul>
+                        <li>Front-end Development</li>
+                        <li>CMS Development</li>
+                        <li>Web Apps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- STORIES -->
+        <div class="stories">
+            <h4>What's happening...</h4>
+            <p>
+                Follow us on <a href="">Instagram</a>,
+                <a href="">Facebook</a>,
+                <a href="">Linkedin</a> and <a href="">Medium</a> for 
+                inside stories, latest projects, thoughts, and behind the 
+                scenes from the Cregital studio.
+            </p>
+        </div>
+        
+        <!-- GALLERY -->
+        <div class="gallery">
+            <!-- Instagram link -->
+            <a href=""><img src="img/75483270_164805307926766_1935863914853191984_n.jpg" alt=""></a>
+            <a href=""><img src="img/72331084_1182469778625395_5557615803406067814_n.jpg" alt=""></a>
+            <a href=""><img src="img/72781806_439719800051454_4412756119222072475_n.jpg" alt=""></a>
+            <a href=""><img src="img/74938564_568046914026256_3846327531201156908_n.jpg" alt=""></a>
+            <a href=""><img src="img/71697744_1251122971740152_867966272284906301_n.jpg" alt=""></a>
+            <a href=""><img src="img/79524402_126817872110489_276817324325890385_n.jpg" alt=""></a>
+        </div>
+    </main>
+
+            <!-- PROJECT -->
+    <div class="project">
+        <main class="pro">
+            <h4>Ready to start a project?</h4>
+            <p>Let's build something awesome together!</p>
+            <p class="push">Say <a href="mailto:hello@cregital.com">hello@cregital.com</a> or call <a href="tel:+2348020965367">+2348020965367</a></p>
+            <a href="" class="start">Start Project</a>
+        </main> 
+    </div>
+
+    
+        <!-- FOOTER ..... SOCIAL ICONS -->
+    <footer>
+        <main>
+            <p>&copy;2020 SamPhases</p>
+        </main>
+    </footer>
+
+    <div class="cursor"></div>
+    
+
+    <!-- CURSOR JAVASCRIPT -->
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+e.pageY+"px; left: "+e.pageX+"px;");
+        })
+
+        // TYPEWRITER EFFECT
+        const Typewriter = function(txtElement, words, wait = 1000) {
+            this.txtElement = txtElement;
+            this.words = words;
+            this.wait = parseInt(wait,10);
+            this.txt = '';
+            this.wordIndex = 0;
+            this.type();
+            this.isDeleting = false;
+        }
+
+        // TYPE METHOD
+        Typewriter.prototype.type = function() {
+            // console.log('hello');
+            // CURRENT INDEX OF WORD
+            const current = this.wordIndex % this.words.length;
+            // console.log(current);
+            const fullTxt = this.words[current];
+            // console.log(fullTxt);
+
+
+            // CHECK IF DELETING
+            if(this.isDeleting) {
+                // REMOVE CHAR
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                // ADD CHAR
+                this.txt = fullTxt.substring(0,this.txt.length + 1);
+            }
+
+            // INSET TXT INTO ELEMENT
+            this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`
+
+
+            // INITIAL TYPE SPEED
+
+            let typeSpeed = 300;
+
+            if(this.isDeleting) {
+                typeSpeed /= 2;
+            }
+
+            // CHECK IF WORD IS COMPLETE
+            if(!this.isDeleting && this.txt === fullTxt) {
+                typeSpeed = this.wait;
+
+                // SET DELETE TO TRUE
+
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === "") {
+                this.isDeleting = false;
+                // MOVE TO THE NEXT WORD
+                this.wordIndex++;
+
+                // PAUSE BEFORE TYPING
+                typeSpeed = 500;
+            }
+
+
+            setTimeout(() => {
+                this.type()
+            }, typeSpeed)
+        }
+
+        // INIT ON DOM LOAD
+        document.addEventListener('DOMContentLoaded', init);
+        // INIT APP
+        function init() {
+            const txtElement = document.querySelector('.txt-type');
+            const words = JSON.parse(txtElement.getAttribute('data-words'));
+            const wait = txtElement.getAttribute('data-wait');
+
+            // INIT TYPEWRITER
+            new Typewriter(txtElement,words,wait);
+        }
+    </script>
+
+
+
+</body>
+</html>
